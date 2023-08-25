@@ -252,7 +252,7 @@ class WriteToFile{
         //create a new FileWrite object name fw, and set it equal to new FileWriter whose constructor
         //parameters are the same of hte object "salesData,txt", and the boolean true, which is  an option that
         //allows for appending to the file.
-        FileWriter fw = new FileWriter("salesData.txt, true");
+        FileWriter fw = new FileWriter("salesData.txt", true);
 
         //create anew PrintWriter object named salesWriter, and set it equal to new PrintWriter object whose
         //constructor parameter is the FileWriter object fw created previously
@@ -262,7 +262,9 @@ class WriteToFile{
         for(int i = 0; i < order.size();i++){
             salesWriter.println(order.get(i));
         }
-        //stop the writer from continue to run
+        //run salesWriter.println(order)
+        //salesWriter.println(order);
+        //use salesWriter.close() to stop the writer from continue to run
         salesWriter.close();
         System.out.println("Successfully wrote to the file");
 
